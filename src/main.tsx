@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
 import './index.css'
 import ErrorPage from './error-page.tsx'
 
@@ -13,11 +12,12 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import { ThemeProvider } from '@/components/theme-provider.tsx'
+import { HomeComponentWrapper } from './HomeComponentWrapper.tsx'
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element:  <App />,
+    element:  <HomeComponentWrapper />,
     errorElement: <ErrorPage />,
   }
 ]);
